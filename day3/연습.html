@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .wrap{
+            width: 600px;
+            padding: 10px 30px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .title{
+            width: 100%;
+            /* border: 1px solid black; */
+            
+        }
+        .info{
+            width: 100%;
+            /* border: 1px solid black; */
+        
+        }
+        
+        .field{
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        .why{
+            width: 100%;
+            /* border: 1px solid black; */
+            
+        }
+        label{
+            width:60px;
+            padding: 10px;
+            display: inline-block;
+        }
+        textarea{
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        .info input{
+            width: 25%;
+            padding: 10px;
+        }
+        .btn_wrap{
+            width: 100%;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        button{
+            width: 15%;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 커버박스 -->
+     <div class="wrap">
+        <!-- 제목 박스 -->
+         <div class="title">
+            <h2>
+                프런트엔트 개발자 지원서
+            </h2>
+            <p>
+                HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+            </p>
+         </div>
+        <!-- 개인 정보 -->
+         <div class="info">
+            <h3>
+                개인정보
+            </h3>
+            <ul>
+                <li><label>이름</label><input type="text" placeholder="공백없이 입력하세요"></li>
+                <li><label>연락처</label><input type="text"></li>
+            </ul>
+         </div>
+        <!-- 지원 분야 -->
+         <div class="field">
+            <h3>
+                지원분야
+            </h3>
+            <ul>
+                <li><input type="radio" name="field" value="웹 퍼블리싱">웹 퍼블리싱</li>
+                <li><input type="radio" name="field" value="웹 애플리케이션 개발">웹 애플리케이션 개발</li>
+                <li><input type="radio" name="field" value="개발 환경 개선">개발 환경 개선</li>                              
+            </ul>
+         </div>
+        <!-- 지원 동기 -->
+         <div class="why">
+            <h3>지원 동기</h3>           
+            <textarea placeholder="본사 지원 동기를 간략히 써 주세요"></textarea>           
+         </div>
+        <!-- 버튼 -->
+         <div class="btn_wrap">
+            <button>접수하기</button>
+            <button>다시쓰기</button>
+         </div>
+     </div>
+</body>
+</html>

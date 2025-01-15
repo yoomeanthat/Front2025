@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .wrap{
+            display: flex;
+            border: 1px solid black;
+        }
+        .wrap>div{
+            width: 33.3%;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .title_wrap{
+            align-content: center;
+            text-align: center;
+            
+        }
+
+        .order_wrap{
+            align-content: center;
+            text-align: center;
+        }
+
+        input{
+            width: 250px;
+            height: 50px;     
+            border: none;
+            outline: none;
+
+            margin-left: 10px;
+        }
+
+        button{
+            width: 50px;
+            height: 50px;
+             
+        }
+
+        .search_wrap{
+            width:350px;
+            border: 5px solid aqua;
+            border-radius: 50px;
+            margin: 0 auto;
+        
+        }
+        .search_wrap:hover{
+            box-shadow: 0px 0px 10px 10px; color:blue
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            text-align: center;
+
+            padding: 0px;
+            margin: 0px;
+            
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        li{
+           
+            border: 1px solid black;
+        }
+        .menu_wrap{
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="title_wrap">
+            <a><img src="image/rn_header_homeshopping_v2.gif"></a>
+        </div>
+        <div class="order_wrap">
+            <div class="search_wrap">
+                <input type="text"><button>조회</button>
+            </div>
+        </div>
+        <div class="menu_wrap">
+            <ul class="menu_box">
+                <li class="item">
+                    <img src="image/btn_header_utill1.png"><br>로그인
+                </li>
+                <li class="item">
+                    <img src="image/btn_header_utill2.png"><br>로그인
+                </li>
+                <li class="item">
+                    <img src="image/btn_header_utill3.png"><br>로그인
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

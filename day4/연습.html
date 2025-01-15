@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .top_wrap{
+            margin-top: 100px;
+            height: 150px;
+            background: aliceblue;
+            position: relative;
+
+            
+        }
+
+        .item_wrap{           
+            padding: 0px;
+            /* border: 1px solid black; */
+            display: flex;
+
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            
+            margin: 0px;
+            text-align: center;
+            align-items: center;
+            
+            
+            
+            
+            
+            
+            
+        }
+
+        .item1{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+            
+        }
+
+        .item1:hover{
+            background-color: blue;
+        }
+
+        .item2{
+            width: 40px;
+            height: 40px;
+            background-image: url(https://lh3.googleusercontent.com/ogw/ADGmqu_sKQ74r14XW5bWUAIRoXn7hut8HTvtMAAH_iD3EA=s64-c-mo);
+            background-size: cover;
+            background-position: center;
+            
+            border-radius: 50px;
+
+            
+            
+        }
+        .item2:hover{
+            box-shadow: 0px   0px   10px   10px rgb(83, 173, 106);
+        }
+
+        li{
+            list-style: none;
+              
+        }
+
+        img{
+            width: 500px;
+            height: 200px;
+            
+        }
+        .img_wrap{
+            text-align: center;
+        }
+        .search_wrap{
+            width:500px;
+            display: flex;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            
+            justify-content: space-around;
+            align-items: center;
+        }
+        .search_bar input{
+            width: 400px;
+            height:50px;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+        .search_btn img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .search_bar input:hover{
+            box-shadow: 0px 0px 10px 10px;
+            color: aqua;
+        }
+        .search_btn img:hover{
+            box-shadow: 0px 0px 10px 10px;
+            color: aqua;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <!-- 파란칸 -->
+    <div class="top_wrap">
+        <!-- 동그라미칸 -->
+         <ul class="item_wrap">
+            <li class="item1">Gmail</li>
+            <li class="item1">로그인</li>
+            <li class="item1">이미지</li>
+            <li class="item2"></li>
+         </ul>
+    </div>
+
+    <!-- 이미지 칸 -->
+     <div class="img_wrap">
+        <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+     </div>
+     
+     <!-- 검색바 영역 -->
+      <div class="search_wrap">
+        <!-- 검색창 영역 -->
+         <div class="search_bar">
+            <input type="text">
+         </div>
+        <!-- 버튼 영역 -->
+        <div class="search_btn">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JO-CB3HSZIPWlJl_5K9T2kEUfyo0qtYE3Q&s">
+            </div>
+        </div>
+
+      </div>
+
+</body>
+</html>

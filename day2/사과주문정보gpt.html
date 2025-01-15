@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 공통 스타일: 부모 요소 */
+        .container {
+            width: 650px;
+            margin: 0 auto;
+            border: 1px solid purple;
+        }
+
+        .box {
+            padding: 30px;
+            border: 1px solid grey;
+        }
+
+        .box h2 {
+            margin: 0;
+        }
+
+        .box p {
+            margin: 10px 0;
+        }
+
+        /* 배경 이미지 및 사이즈 */
+        .box1 {
+            height: 300px;
+            background-size: cover;
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201104_54%2F1604472247237o1es8_JPEG%2F5608030920917393_1163898302.jpg&type=a340);           
+        }
+
+        /* 박스2: 확인사항 */
+        .box2 {
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        /* 박스3, 박스4, 박스5 */
+        .box3, .box4, .box5 {
+            height: 100px;
+            text-align: center;
+        }
+
+        .box4 {
+            border-top-color: grey;
+            border-bottom-color: grey;
+        }
+
+        .box5 {
+            border-top-color: grey;
+        }
+
+        span {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box box1"></div>
+
+    <div class="box box2">
+        <h3>확인사항</h3>
+    </div>
+
+    <div class="box box3">
+        <h2>주문 및 배송</h2>
+        <p>
+            오후 2시 이전 주문 건은 당일 배송합니다
+            <br>2시 이후 주문건은 다음날 발송합니다(주말 제외)
+        </p>
+    </div>
+
+    <div class="box box4">
+        <h2>교환 및 환불</h2>
+        <p>
+            불만족시 100%환불해 드립니다
+            <br>고객센터로 전화주세요
+        </p>
+    </div>
+
+    <div class="box box5">
+        <h2>고객센터</h2>
+        <p>
+            0000-0000
+            <br>상담시간: 오전9시~ 오후6시<span>(토/일, 공휴일 휴무)</span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

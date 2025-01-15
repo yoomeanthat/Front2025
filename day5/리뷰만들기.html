@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .wrap{
+            width: 750px;
+            border: 1px solid black;
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20160424_70%2Fa_alpha_1461482016368aUJeV_JPEG%2F%25B4%25AB%25C0%25C7_%25B0%25E1%25C1%25A4_27.jpg&type=a340);
+        }
+
+        .wrap > div{
+            border: 1px solid gray;
+            /* height: 100px; */
+        }
+
+        /* line1 스타일 */
+
+        h1{
+            color: red;
+            margin: 0px;
+            letter-spacing: 5px;
+        }
+        h4{
+            font-size: 20px;
+            
+        }
+        .line1{
+           height: 60px;
+           line-height: 60px;
+           text-align: center;
+        }
+        /* line2 스타일 */
+        .line2{
+            display: flex;
+            text-align: center;
+        }
+        .line2_col1 {
+            width: 50%;
+            height: 200px;
+            border: 1px solid black;
+
+            background-image: url(https://search.pstatic.net/common/?src=https%3A%2F%2Fsearchad-phinf.pstatic.net%2FMjAyNTAxMTNfODIg%2FMDAxNzM2NzQ2MTAyMzgx.e96QMdnNNfpLHIxGfD2v1kEe9XW6Eh7JDoaGPioMq3Ug.H52tssXOy6f1xmKppaRJIybvUv53dQotVJA5Emhs5Fsg.PNG%2F1706274-8e2dd827-4033-45eb-83f4-e7318478d676.png&type=f372_372);
+            background-size: cover;
+            background-position: center;
+            
+        }
+        
+            
+        
+        .line2_col2{
+            width: 50%;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .line2_col2 textarea{
+            width: 100%;
+            height: 130px;
+            box-sizing: border-box;
+        }
+
+        /*.line2_col1 img{
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover; img 태그만 단독으로 사용된다면 무시됨
+        }
+        */
+        .line2_col1 img{
+            width: 200px;
+            height: 120px;
+        }
+        /* line3 스타일 */
+        .line3{
+            display: flex;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .line3_col{
+            width: 33.3%;
+            /* height: 100px; */
+            border: 1px solid black;
+        }
+        .line3 h4{
+            margin: 0;
+        }
+        .line3 input{
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        /* line4 스타일 */
+        .line4{
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .line4 h4{
+            margin-top: 0px;
+        }
+        .line4 textarea{
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+        }
+        /* line5 스타일 */
+        .line5{
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .line5 textarea{
+            width: 100%;
+            height: 130px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="line1"><h1> REVIEW(추첨을 통해 기프티콘 드립니다) </h1></div>
+        <div class="line2">
+            <!-- 이미지칸 -->
+            <div class="line2_col1">
+                
+            </div>
+            <!-- 내용칸 -->
+            <div class="line2_col2">
+                <h4>방문경로 (인터넷, 지인, 블로그, SNS)</h4>
+                <textarea></textarea>
+            </div>
+        </div>
+        <div class="line3">
+
+            <div class="line3_col">
+                <h4>나이</h4>
+                <input type="text">
+            </div>
+            <div class="line3_col">
+                <h4>성별</h4>
+                <input type="text">
+            </div>
+            <div class="line3_col">
+                <h4>방문목적</h4>
+                <input type="text">
+            </div>
+            
+
+        </div>
+        <div class="line4">
+            <h4>방문후기(시설만족도, 청결도)</h4>
+            <textarea></textarea>
+
+        </div>
+        <div class="line5">
+            <h4>더 나누고 싶은 내용</h4>
+            <textarea></textarea>
+        </div>
+    </div>
+</body>
+</html>

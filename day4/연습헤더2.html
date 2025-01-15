@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            height: 200px;
+            border: 1px solid black;
+            display:flex;
+            
+            
+            
+        }
+
+        .item1, .item2, .item3{
+            width: 33.3%;
+            border: 1px solid black;
+        }
+        .util{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            list-style: none;
+            display: flex;
+            
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        
+        }
+        .item3{
+            position: relative;
+        }
+       
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .search_wrap{
+            display: flex;
+            
+        }
+      
+        input{
+            
+            padding: 10px;
+            border: none;
+            outline: none;
+            
+        }
+        .search_btn{
+            width: 50px;
+            height: 50px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JO-CB3HSZIPWlJl_5K9T2kEUfyo0qtYE3Q&s");
+            background-size: cover;
+        }
+        .search_wrap{
+            width: 300px;
+            text-align: center;
+            border: 3px solid aqua;
+            border-radius: 50px;
+            justify-content: space-around;
+            align-items: center;
+
+            position: absolute;
+            top:20px;
+            left: 20px;
+        }
+        .item2{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item1">
+            <p>로고</p>
+        </div>
+        <div class="item2">
+            <div class="search_wrap">
+                <div class="search_bar"><input type="text"></div>
+                <div class="search_btn"></div>
+            </div>
+        </div>
+        <div class="item3">
+            <ul class="util">
+                <li><img src="image/btn_header_utill1.png"><br>로그인</li>
+                <li><img src="image/btn_header_utill2.png"><br>내정보</li>
+                <li><img src="image/btn_header_utill3.png"><br>장바구니</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
