@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let num1 = parseInt(prompt("입력한 숫자까지 중의 홀수를 알려줄게"));
+
+        let arr=[];
+        for ( let i =1; i <= num1; i++) {
+            if(i % 2 ===1) {
+                console.log(i);
+                arr.push(i);
+            }
+        }
+        console.log(arr);
+        // alert(arr[0]);
+        // alert(arr[1]);
+        // alert(arr[2]);
+      
+        for ( let i = 0; i <=arr.length; i++){
+            alert(arr[i])
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h2>continue</h2>
+
+        <p>반복문 안에서 건너뛰기 하는 기능</p>
+
+        <script>
+
+            //홀수합 구하기 (12345678910)
+                // 13579
+
+            //홀수의 합
+            //12345678910
+            //짝수일 때 합계변수에 누적되는 코드를 건너뛰게 하는 방식을 사용해서 홀수합
+            
+            let oddSum =0;
+            for( let i=1; i<=10; i++){
+
+                if( i%2 ==0){
+                    continue; //아래코드를 수행하지 않고 다음반복으로 진행하게 함
+                }
+
+                oddSum = oddSum + i;
+            }
+
+            alert(oddSum);
+        </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="" id="bg">
+
+    <script>
+
+
+        /*
+
+            기능: 웃긴이미지 제공하기
+            입력: 없음
+            반환: 웃긴이미지 url
+
+        */
+            function 웃긴이미지가져오기(){
+                let 이미지="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzEyMTFfNjEg%2FMDAxNTEyOTIzNTIzODEx.NtwojV_BuWfd1aGwf1MOUYDvrKdxjsDcF3pvZekaiDQg.r-AvWFmrccQSabA3dx9MG5nUk85ozCSeWptDyXX_vCgg.JPEG.bonayang0%2F-1111142028.jpg&type=a340";
+                return 이미지;
+            }
+
+
+            alert("웃긴이미지 보여드립니다");
+
+            let result = 웃긴이미지가져오기();
+            alert(result);
+
+            
+            let imgTag = document.getElementById("bg");
+            imgTag.src=result;
+            
+    </script>
+</body>
+</html>
