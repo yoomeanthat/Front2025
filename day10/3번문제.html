@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <script>
+
+            function multi(num){
+                
+                for(i=1; i<=9; i++){
+                    alert(num*i);
+                    document.write(num*i + "<br>");
+                }
+                
+            }
+
+            let num = parseInt(prompt("몇 단을 실행할까요?"));
+
+            if(isNaN(num)){
+                alert("숫자를 입력하시오")
+            }else{
+                alert( multi(num) );
+                }
+            
+            
+
+        </script>
+    
+</body>
+</html>

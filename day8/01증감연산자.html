@@ -50,9 +50,13 @@
         x++; //x 의 변수 11
         --y; //9
         ++z; //11
+       
 
         let result = x++ + y++ + ++z; // 11 + 9 + 12 = 32
+        let result2 = ++x + --y + z++; // 12 + 8 + 11 = 31
         console.log(result);
+        console.log(result2);
+        
         
         
         

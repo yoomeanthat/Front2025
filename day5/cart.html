@@ -21,15 +21,15 @@
             padding: 20px;
         }
 
-        /*.order_wrap{
+        .order_wrap{
             height: 200px;
             border: 1px solid black;
         }
-        */
+        
         /**/
         table{
             width: 100%;
-            border: 0.1px solid gray;
+            border: 0.1px solid black;
             border-collapse: collapse;
 
             margin-top: 50px;
@@ -43,6 +43,7 @@
         td{
             width: 20%;
             border: 0.1px solid gray;
+            text-align: center;
         }
 
         table caption{
@@ -57,18 +58,12 @@
             height: 60px;
         }
 
-        td:nth-child(1){
-            text-align: center;
-        }
-
-        td:nth-child(2){
-            text-align: center;
-        }
+       
 
         #order{
 
             margin-top:20px;
-            font-size: 12px;
+            font-size: 15px;
             /* border: 0.1px solid gray; */
             height: 40px;
             line-height: 40px;
@@ -86,7 +81,7 @@
             cursor: pointer;
         }
 
-        #order-price{
+        .order_price{
             color: red;
             font-weight: bold;
         }
@@ -148,7 +143,7 @@
             <div><button>선택 삭제</button></div>
 
             <div id="order">
-                합계 <span id="order-price">90000</span>원
+                합계 <span class="order_price">90000</span>원
             </div>
         </div>
     </div>

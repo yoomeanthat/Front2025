@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function adult(age){
+            if(age>=20){
+                return true;
+            }else 
+                return false;
+         }
+        
+
+        
+        
+        while(true){
+            let input = prompt("나이를 입력하시오");
+            
+            if(isNaN(input)){
+                alert("숫자를 입력하시오");
+            }else if(Number(input)){
+                alert(adult(input));  
+                break;             
+            }
+            
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>

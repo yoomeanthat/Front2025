@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function star( input){
+           
+            let result = "";
+
+            for( let i=1; i<=input ; i++){
+                result  += "*";
+            }
+            return result;     
+        }
+
+
+
+
+/*
+        function star2( input){
+           
+           let result = [];
+
+           for( let i=0; i<input ; i++){
+               
+               result[i]='*';
+           }
+           return result;     
+       }
+*/
+
+
+
+
+        let input = parseInt(prompt("별을 몇 개 찍을까요?"));
+
+        let result = star( input);
+        alert(result);
+
+
+/*       let result2 = star2( input);
+        console.log(result2);
+
+        for(let i=0; i<result2.length ; i++){
+            document.write("*");
+        }
+*/       
+
+    </script>
+
+</body>
+</html>
