@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let kors = [90, 80, 70, 99, 100];
+
+        let total=0;
+
+        let kors2 = [];
+
+        
+
+
+        for(i=0;i<5;i++){
+            total = total + kors[i];
+        }
+
+        let avg = total/kors.length;
+
+
+        let index=0;
+
+        for(i=0;i<kors.length;i++){
+
+            if(avg<kors[i]){
+                kors2[index] = kors[i];
+                index++;
+            }
+        }
+        console.log(kors2.length);
+
+
+
+      
+        
+        
+
+    </script>
+</body>
+</html>

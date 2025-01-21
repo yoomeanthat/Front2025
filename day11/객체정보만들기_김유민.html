@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const robot ={
+
+            이름: "아이언맨",
+            재질: "폴리우레탄",
+            나이: "12살",
+            사는곳: "주유소",
+            색깔: "골든로즈",
+            무게: "60kg",
+            좋아하는음식: "고급휘발유",
+            취미: "길찾기 안내",
+
+            recharge : function(fuel){
+                if(this.좋아하는음식.includes(fuel)){
+                    return `${this.이름}이 ${this.좋아하는음식}를 충전한다`;
+                }else{
+                    return "연료가 충분해 충전하지 않아도 됩니다";
+                }
+            },
+
+            help : function(talk){
+                if(this.취미.includes(talk)){
+                    return `${this.취미}를 시작한다`;
+                }else{
+                    return "안내를 종료합니다";
+                }
+            },
+
+            printInfo : function(){
+                return `이름: ${this.이름} 재질: ${this.재질} 나이: ${this.나이} 사는곳: ${this.사는곳} 색깔: ${this.색깔} 무게: ${this.무게} 좋아하는 음식: ${this.좋아하는음식} 취미: ${this.취미}`
+            },
+
+            getColor: function(){
+                return this.색깔;
+            }
+            
+        };  
+
+        
+        let result1 = robot.recharge(prompt("무엇을 충전하시겠습니까?"));
+        alert(result1);
+
+        let result2 = robot.help(prompt("무엇을 도와드릴까요?"));
+        alert(result2);
+        
+        let result3 = robot.printInfo(alert("아이언맨의 정보를 출력합니다"));
+        alert(result3);
+
+        let result4 = robot.getColor(alert("아이언맨의 색깔을 출력합니다"));
+        alert(result4);
+            
+            
+    </script>
+
+</body>
+</html>

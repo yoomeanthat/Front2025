@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const cleaner = [
+            {
+                이름: "청이",
+                제조회사: "삼성",
+                나이: "5세",
+                색깔: "파랑",
+                무게: "3kg",
+                좋아하는음식: "전기"
+            },
+
+            {
+                이름: "적이",
+                제조회사: "샤오미",
+                나이: "3세",
+                색깔: "빨강",
+                무게: "2kg",
+                좋아하는음식: "전기"
+            }
+        ];
+
+        console.log(cleaner[0].이름);
+        console.log(cleaner[0].제조회사);
+        console.log(cleaner[0].나이);
+        console.log(cleaner[0].색깔);
+        console.log(cleaner[0].무게);
+        console.log(cleaner[0].좋아하는음식);
+
+
+        console.log("=============");
+
+
+        console.log(cleaner[1]['이름']);
+        console.log(cleaner[1]['제조회사']);
+        console.log(cleaner[1]['나이']);
+        console.log(cleaner[1]['색깔']);
+        console.log(cleaner[1]['무게']);
+        console.log(cleaner[1]['좋아하는음식']);
+
+
+        console.log("=============");
+
+        
+        for(i=0;i<cleaner.length;i++){
+            console.log(cleaner[i]);
+        }
+
+        console.log("=============");
+
+        for(i=0;i<cleaner.length;i++){
+            let result = cleaner[i];
+
+            console.log(result.이름);
+            console.log(result.제조회사);
+            console.log(result.나이);
+            console.log(result.색깔);
+            console.log(result.무게);
+            console.log(result.좋아하는음식);
+        }
+
+    </script>
+
+</body>
+</html>

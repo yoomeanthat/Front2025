@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let prices = [1000, 1500, 900, 1800, 2000, 1200];
+        let newPrices = [];
+
+        let index=0;
+        for(i=0;i<prices.length;i++){
+            if(prices[i]>1200){
+                newPrices[index] = prices[i];      
+                index++;       
+            }
+        } 
+        console.log(newPrices);
+
+    </script>
+
+</body>
+</html>

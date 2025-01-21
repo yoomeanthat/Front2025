@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+    <img src="" id="poster"> <br>
+
+
+    <script>
+
+        let result=confirm("온라인 음식점에 방문하시겠습니까?");
+
+        alert(result);
+        console.log(result);
+
+        if (result==true){
+            alert("어서오세요!!");
+        }else if (result==false){
+            alert("다음에 다시 방문해주세요");
+        }
+
+
+
+        let food = [
+        [
+            [
+                ['쌀밥', '완둥콩밥', '흑미밥'],
+                ['감자밥', '보리밥', '카레라이스']
+            ],
+                
+            [
+                ['오므라이스', '볶음밥', '비빔밥'],
+                ['김치볶음밥', '불고기덮밥', '오징어덮밥']
+            ]
+        ],
+
+
+
+        [
+            [
+                ['잡채밥','자장밥','국수장국'],
+                ['칼국수', '콩국수', '우동']
+            ],
+
+            [
+                ['떡국', '만두국', '물냉면'],
+                ['라면', '자장면', '짬뽕']
+            ]
+        ]
+    ];    
+        
+
+
+        for(i=0;i<2;i++){
+            for(j=0;j<2;j++){
+                for(k=0;k<2;k++){
+                    for(l=0;l<3;l++){
+                        console.log(food[i][j][k][l]);
+                        document.write(food[i][j][k][l]);
+                        document.write(" ");
+                        
+                    }document.write("<br>");
+                }document.write("<br>");
+            }document.write("<br>");
+        }
+
+
+
+        function poster(){
+            let 이미지="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171012_132%2F1507737024108k7ty1_JPEG%2FpeNF-SXWyKn4w86f1GBGweOf.jpg&type=a340";
+            return 이미지;    
+        }
+
+       
+
+        let result2 = poster();
+        let foodTag = document.getElementById("poster");
+        foodTag.src= result2;
+    </script>
+
+</body>
+</html>
