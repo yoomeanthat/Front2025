@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+        ul li{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            text-align: center;
+
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+
+    <script>
+
+        function init(){
+            
+            let products = [
+                {
+                    url:"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA4MjNfNjYg%2FMDAxNzI0Mzg1NTQ2MTM2.Jf-q5DpCSrwQY2nK2NPoaKnOl_URLsanfQhjR86cTO0g.P0yvEl7k96FLSAFx_-KfKE_2M65M14FMlrVpVGqzzw4g.JPEG%2F3d%25C5%25A9%25B7%25D2%2528%25BE%25C6%25B5%25F0%25B4%25D9%25BD%25BA_%25B7%25CE%25B0%25ED%25292_%25BB%25E7%25BA%25BB.jpg&type=a340",
+                    title:"아이다스",
+                    price:"150,000"
+                },
+                {
+                    url:"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA3MjVfMTE5%2FMDAxNzIxOTE3MDQ3MzQy.xMFeDJ3-S1xBrEkiFWoeSrVhPitPDyVIG_HJKZ2Yz24g.r9SOlpg-NKWxh7VqSzKTkoprB3AATB9ZTKJkvGEkJE4g.JPEG%2F1721917040_771_28877.jpg&type=l340_165",
+                    title:"나이키",
+                    price:"200,000"
+                },
+                {
+                    url:"https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fprd_img%2F2024051016020173695222303663dc669b3ec1.jpg&type=a340",
+                    title:"널디",
+                    price:"250,000"
+                }
+            ];
+
+
+
+            console.log(products);
+
+            let product_list = document.querySelector(".product_list");
+
+            for( let i=0; i < products.length; i++){
+
+                let item = products[i];
+                console.log(item);
+
+                let li = document.createElement("li");
+                li.innerHTML = 
+                `<img src="${item.url}">
+                <p>${item.title}</p>
+                <p>${item.price}</p>`;
+
+                //부모에 추가하기
+                product_list.appendChild(li);
+            }
+
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    
+    <ul class="product_list">
+       <!-- 자바스크립트로 상품목록 만들기 -->
+    </ul>
+</body>
+</html>

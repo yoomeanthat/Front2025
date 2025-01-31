@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menu{
+            height: 200px;
+        }
+
+        .item{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            /* border: 1px solid black; */
+
+        
+        }
+    </style>
+
+    <script>
+         function makeArray(){
+           // alert("dkdfjdkjdkf");
+            //menu클래스 밑의 있는 메뉴정보를 가져오기 
+            //배열에 넣기 
+            //배열을  console.log출력
+            let menu= document.querySelectorAll(".menu > div");
+            let menuArr=[];
+           
+            for(let i=0; i<menu.length ; i++){
+                let item  = menu[i]; 
+                
+                menuArr[i]= item.innerHTML;
+                // alert(menu[i]); 
+            }
+
+            //배열확인
+            console.log(menuArr); 
+        }
+    </script>
+</head>
+<body>
+    
+
+    <div class="menu">
+        <div class="item">돈까스</div>
+        <div class="item">제육</div>
+        <div class="item">카레돈까스</div>
+        <div class="item">오므라이스</div>
+
+    </div>
+
+
+    <button onclick="makeArray()">클릭</button>
+</body>
+</html>
