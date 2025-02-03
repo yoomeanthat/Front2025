@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 200px;
+            background-color: blue;
+        }
+
+        .inner{
+            width: 1200px;
+            height: 100%;
+            background-color: antiquewhite;
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+
+            display: flex;
+
+        }
+
+        .menu{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .item_content{
+            display: none;
+        }
+
+        .item_name{
+            border-radius: 10px 10px 0px 0px; /*위쪽 두 군데가 둥글게*/
+            padding: 10px 10px 30px 10px; /*시계방향*/
+            background-color: aquamarine;
+        }
+
+        .item_name:hover{
+            background-color: azure;
+        }
+
+        .menu_item:hover    .item_content{
+            display: block;
+
+            /*전체메뉴로 만들기*/
+            position: fixed;
+            left: 0px;
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <header>
+        <div class="inner">
+
+            <!-- 메뉴 -->
+
+            <ul class="menu">
+                <li class="menu_item">
+                    <div class="item_name">커피</div>
+                    <!-- 하위메뉴 -->
+                     <div class="item_content">커피하위메뉴</div>
+                </li>
+                <li class="menu_item">
+                    <div class="item_name">케잌</div>
+                    <!-- 하위메뉴 -->
+                     <div class="item_content">케잌하위메뉴</div>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
