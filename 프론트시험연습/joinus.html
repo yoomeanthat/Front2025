@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         .header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+
+            position: relative;
+        }
+
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+      
+        .search{
+            width: 200px;
+            height: 50px;
+            /* border: 1px solid black; */
+
+            display : flex;
+
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+
+        #search_bar{
+            margin: 3px;
+            
+            width: 80%;
+            height: 80%;
+            
+            border: none;
+            outline: none;
+
+
+        }
+
+        #search_btn{
+            margin: 5px;
+
+            
+
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black; */
+        }
+
+
+        ul{
+            display: flex;
+
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .footer{
+            height: 60px;
+            background-color: rgb(233,239,239);
+            
+
+        }
+
+        .footer_item{
+            
+            width: 33%;
+            height: 60px;
+            
+        }
+       
+        .footer img{
+            height: 20px;
+        }
+
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        
+            
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+
+        section{
+            height: 600px;
+            
+        }
+        
+        table{
+
+            
+            width: 800px;
+            border: 1px solid rgb(227, 216,216);
+            border-collapse: collapse;
+            
+            margin: 0 auto;
+            margin-top: 20px;
+            
+        }
+
+        caption{
+            text-align: center;
+        }
+        
+        td{
+            border: 1px solid rgb(227, 216,216);
+            font-size: 12px;
+            
+        }
+
+        tr{
+            height: 40px;
+        }
+
+        td:nth-child(1){
+            text-align: center;
+        }
+
+        tr:nth-child(3){
+            height: 70px;
+        }
+
+        tr:nth-child(7){
+            height: 70px;
+        }
+
+        table input, select{
+            width: 150px;
+            height: 30px;
+        }
+
+        button{
+            width: 150px;
+            height: 40px;
+            border: 0px;
+        }
+        
+        span{
+            color: red;
+        }
+    </style>
+
+    <script>
+        function check(){
+            let frm=document.frm;
+            let username=frm.username;
+            let userid=frm.userid;
+            let userpassword1=frm.userpassword1;
+            let userpassword2=frm.userpassword2;
+            let useremail1=frm.useremail1;
+            let useremail2=frm.useremail2;
+
+            if(username.value==""){
+                alert("이름 입력하세요");
+                username.focus();
+            }else if(userid.value==""){
+                alert("아이디 입력하세요");
+                userid.focus();
+            }else if(userpassword1.value==""){
+                alert("비밀번호 입력하세요");
+                userpassword1.focus();
+            }else if(userpassword2.value==""){
+                alert("비밀번호확인을 설정하세요");
+                userpassword2.focus();
+            }else if(useremail1.value==""){
+                alert("이메일 입력또는 선택하세요")
+                useremail1.focus();
+            }else if(useremail2.value==""){
+                alert("이메일 입력또는 선택하세요")
+                useremail2.focus();
+            }else{
+                alert("회원가입성공");
+            }
+        }
+
+        function emailcopy(){
+            let frm=document.frm;
+            let copy=frm.copy;
+            let useremail2=frm.useremail2;
+            let copytext=copy.options[copy.selectedIndex].text;
+            let copyvalue=copy.options[copy.selectedIndex].value;
+
+            useremail2.value=copytext;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <img src="\시험연습_샘플\시험연습_샘플\images\logo.png">
+        </div>
+
+        <div class="search">
+            
+                <input type="text" id="search_bar">
+                <img src="\시험연습_샘플\시험연습_샘플\images\검색.png" id="search_btn">
+            
+        </div>
+    </div>
+
+
+
+    <nav>
+        <a href="\시험연습\login.html">로그인</a>
+        <a href="\시험연습\joinus.html">회원가입</a>
+        <a href="\시험연습\index.html">홈으로</a>
+    </nav>
+
+
+    
+
+    <section>
+        <form name="frm">
+        <table>
+            <caption>회원가입</caption>
+
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="userid"> 
+                    <button>중복확인</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="text" name="userpassword1"> <br>
+                    <span>※비밀번호는 8자리 이상 영문숫자를 작성해 주세요</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호확인</td>
+                <td><input type="text" name="userpassword2"></td>
+            </tr>
+
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" name="useremail1">@<input type="text" name="useremail2">
+                    <select onchange="emailcopy()" name="copy">
+                        <option value="">선택하세요</option>
+                        <option value="">www.naver.com</option>
+                        <option value="">www.google.com</option>
+                    </select>
+                    <button>중복확인</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>학년/반</td>
+                <td>
+                    <select>
+                        <option value="">선택하세요</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                    </select>
+                    학년
+                    <select>
+                        <option value="">선택하세요</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                    </select>
+                    반
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2">
+                    <button onclick="check()">가입</button>
+                    <button>취소</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </section>
+
+
+
+    <div class="footer">
+        <ul>
+            <li class="footer_item">
+                <img src="\시험연습_샘플\시험연습_샘플\images\footer_acorn.png">
+            </li>
+            <li class="footer_item">
+                (주)에이콘이즈 에이콘아카데미(홍대)
+            </li>
+            <li class="footer_item">
+                COPYRIGHT(C) HBILAB ALL RIGHTS  RESERVED.
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

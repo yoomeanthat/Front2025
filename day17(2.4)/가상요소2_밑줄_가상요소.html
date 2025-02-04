@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            width: 100px;
+
+        }
+
+        li{
+            border: 1px solid black;
+            height: 40px;
+            position: relative;
+        }
+
+        li::after{
+            content:""; /*반드시  추가*/
+
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+
+
+            height: 2px;
+            background-color: red;
+            /*  */
+            width: 0px;
+
+            transition: 0.5s;
+        }
+
+        li:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <ul>
+        <li>메뉴1</li>
+    </ul>
+</body>
+</html>
