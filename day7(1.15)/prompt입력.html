@@ -16,15 +16,23 @@
         */
 
 
-        let userName = prompt("이름을 입력하세요");
+        let userName;
 
-        if (userName == null) {
-            alert("취소버튼을 누르셨군요");
+        while(true){
+            userName = prompt("이름을 입력하세요");
 
-        } else {
-            alert("당신은 이름은 " + userName);
+            if(userName == null){
+                alert("취소버튼을 누르셨군요");
+                continue;
+            }
+
+            else{
+                alert("당신의 이름은 " + userName + "입니다");
+                break;
+            }
 
         }
+
     </script>
 </head>
 

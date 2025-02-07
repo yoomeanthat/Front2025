@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         let user, computer, result;
+
+         while(true){
+            user = prompt( "가위 바위 보 중에서 선택하세오 0 1 2 ");
+            computer  =  Math.floor(  Math.random() *3 ) ;
+
+      
+         if(user==0){  
+             if(computer==1){
+                result="사용자 패";
+             }else if(computer==2){
+                result="사용자 승"
+             }else if(computer==0){
+                result="무승부"
+                alert(result);
+                continue;
+             }
+             alert(result);
+             break;
+            }
+             
+         
+
+         
+         else if(user ==1){
+             if(computer==2){
+                result="사용자 패";
+             }else if(computer==0){
+                result="사용자 승"
+             }else{
+               result="무승무"
+               alert(result);
+               continue;
+             }
+             alert(result);
+             break;
+             }
+
+
+         else if(user==2){
+             if(computer==0){
+                result="사용자 패";
+             }else if(computer==1){
+                result="사용자 승"
+             }else{
+               result="무승부"
+               alert(result);
+               continue;
+             }
+             alert(result);
+             break;
+            }
+         }
+         
+         
+   
+         
+    </script>     
+</body>
+</html>

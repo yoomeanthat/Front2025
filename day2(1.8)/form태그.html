@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+
+        function check(e){
+
+
+            console.log(e);
+            e.preventDefault();
+
+            const userid = document.getElementById("userid").value;
+            const userpassword = document.getElementById("userpassword").value;
+
+            console.log(`아이디: ${userid}`);
+            console.log(`비밀번호: ${userpassword}`);
+
+            window.location.href = "회원가입.html?id=hong&pw=1234";
+
+            
+            // 실제 서버가 있으면 아래와 같이 보낸다. 
+            //const frm  = document.frm;
+           // frm.submit();
+
+            
+            
+        }
+    </script>
 </head>
 
 <body>
@@ -13,12 +39,11 @@
 
     <!--get : 사용자가 보낸 데이터  url에 표시된다  : 기본값--> 
     <!--post : 사용자가 보낸 데이터 url에 표시되지 않는다-->
-    <form action="#"    method="post">
+    <form name = "frm" action=""    method="post">
         <!-- 사용자입력태그-->
-        <input type="text" placeholder="아이디 입력하세요">
-        <input type="password" placeholder="비밀번호 입력하세요">
-        <button>로그인</button>
-        <input type="submit">
+        <input type="text" placeholder="아이디 입력하세요" id="userid">
+        <input type="password" placeholder="비밀번호 입력하세요" id="userpassword">
+        <button onclick="check(event)">로그인</button>
     </form>
 
     

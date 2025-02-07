@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        html,
+        body {
+           
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 로그인영역 */
+        .big_wrap {
+            width: 500px; 
+            height: 450px;         
+            border: 1px solid #E1E1E1;
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 290px;
+            text-align: center;
+        }
+
+        .wrap input {
+            width: 90%;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #E1E1E1;
+        }
+
+        .img_wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0; /* 여백 추가 */
+        }
+        
+        .img_wrap img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .login_button {
+            width: 90%;
+            height: 50px;
+            margin-top: 15px;
+            border-radius: 20px; /* 둥근 모서리 */
+            font-size: 18px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+        
+        .login_button:hover {
+            background-color: #333;
+        }
+        
+        .checkbox_wrap {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: 10px auto;
+            font-size: 14px;
+        }
+        
+        .checkbox_wrap input {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+        }
+        
+        .extra_buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .extra_buttons button {
+            width: 45%;
+            height: 45px;
+            margin: 0 5px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #E1E1E1;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .extra_buttons button:hover {
+            background-color: #f1f1f1;
+        }
+
+
+
+        /* footer */
+        
+
+        .footer {
+            display: flex;
+            text-align: center;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 380px;
+
+            
+        }
+
+        .foot1,
+        .foot3 {
+            width: 20%;
+        }
+
+        .foot2 {
+            width: 60%;
+        }
+
+        .footer_item {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .footer img {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .footer span {
+            color: red;
+}
+    </style>
+
+    <script>
+        function login() {
+            const id = document.getElementById("userid");
+            const pw = document.getElementById("password");
+            if (!id.value) {
+                alert("아이디를 입력하세요");
+                id.focus();
+            }
+            else if (!pw.value) {
+                alert("비밀번호를 입력하세요");
+                pw.focus();
+            }
+            else {
+                alert("로그인 성공");
+                window.location.href = "/mainscreen.html";
+                id.value = "";
+                pw.value = "";
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <div class="big_wrap">
+            <div class="wrap">
+                대성학원 재원생서비스
+                <div class="img_wrap">
+                    <img src="./images/logo_dm.png">  
+                </div>
+                <input type="text" placeholder="아이디" id="userid">
+                <input type="password" placeholder="비밀번호" id="password">
+                <button class="login_button" onclick="login()">로그인</button>
+                
+                <div class="checkbox_wrap">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">아이디 저장</label>
+                </div>
+
+                <div class="extra_buttons">
+                    <button>아이디/비밀번호 찾기</button>
+                    <button>디멤버 등록하기</button>
+                </div>
+            </div>
+    </div>
+
+
+
+    <!-- 푸터 영역 -->
+    <div class="footer">
+        <!-- 푸터 왼쪽 -->
+        <div class="footer_item foot1">
+            <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMTNfMjE0%2FMDAxNjA1MjUyNTk2ODU0.j74xjPeHt-Arx9mXEfbUDi9WcV0c3zfvUauG3SFjOZ8g.imcF1Nf5Ep9nNi70sqx-EtV1O20iRe2QApV43vhxa7og.JPEG.ddmds1%2F%25B4%25E4%25BD%25CA%25B8%25AE%25BF%25B5%25BE%25EE%25C7%25D0%25BF%25F8_%25BF%25B9%25BA%25F1%25C1%25DF1_%25BC%25B3%25B8%25ED%25C8%25B8_%25B4%25EB%25BC%25BA%25C7%25D0%25BF%25F8.jpeg&type=l340_165">
+        </div>
+
+        <!-- 푸터 가운데 -->
+        <div class="footer_item foot2">
+            대성학원 본원 : 02)814-4500 / 강남대성 : 02)581-7888 / 강남대성SII(대치) : 02)556-2733 / 별관 : 02)585-9600<br>
+            강남대성 WE UP : 02)430-8900 / 강남기숙 의대관 : 031)8010-0010 / 강남대성 QUETTA : 031)638-6688<br>
+            대성학원 부산 : 051)553-1616 / 두각 : 02)556-2700<br>
+            [직영] 부산기숙 : 055)381-0700 [자매] 울산 : 052)224-6655
+        </div>
+
+        <!-- 푸터 오른쪽 -->
+        <div class="footer_item foot3">
+            <span>Copyrights Since 1965 대성학원 All Rights Reserved</span>
+        </div>
+    </div>
+
+    
+</body>
+</html>
