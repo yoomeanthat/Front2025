@@ -26,14 +26,14 @@
 
             eat : function(food){
                 if(this.좋아하는음식.includes(food)){
-                    return `${this.이름} ${food} 행복하게 먹음 ^^`;
+                    return `${this.이름}가 ${food} 행복하게 먹음 ^^`;
                 }else{
                     return "좋아하지 않음 멀뚱이 보고 있음";
                 }
             },
 
             printInfo : function(){
-                alert(this.이름 + this.종 + this.나이 + this.무게)
+                alert(`이름: ${this.이름} 종: ${this.종} 나이: ${this.나이} 무게: ${this.무게}`);
             },
 
             getAge: function(){
@@ -45,12 +45,12 @@
         let result1= turtle.eat("건새우");
         alert(result1);
 
-        turtle.printInfo();
+        turtle.printInfo(); // 방법1
 
         let result2= turtle.eat("부스러기");
         alert(result2);
 
-        let result3 = turtle.getAge();
+        let result3 = turtle.getAge(); // 방법2
         alert(result3);
 
     </script>
