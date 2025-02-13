@@ -24,3 +24,6 @@ day4_정리\css문법\08_가상클래스선택자_ active.html
 flex-direction: column;
 
 5.<del></del> => 삭제 <ins></ins> => 밑줄
+
+6.
+day13(1.23)\test.html
