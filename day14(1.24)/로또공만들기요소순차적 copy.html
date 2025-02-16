@@ -46,8 +46,9 @@
 
 
             const wrap = document.getElementById("result");
+            wrap.innerHTML = ""; // 기존 내용 초기화
 
-            const  lottoNumbers =   getLottoNumber();
+            const  lottoNumbers = getLottoNumber();
 
 
             
@@ -72,28 +73,29 @@
             let lottoNumbers=[];    //let lottoNumbers = new Array(6);
 
             let random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[0]=random;
+            alert(lottoNumbers);
+            
 
             random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[1]=random;
+            alert(lottoNumbers);
 
             random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[2]=random;
+            alert(lottoNumbers);
 
             random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[3]=random;
+            alert(lottoNumbers);
 
             random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[4]=random;
+            alert(lottoNumbers);
 
             random = Math.floor(Math.random()*45);   //0~44
-            alert(lottoNumbers);
             lottoNumbers[5]=random;
+            alert(lottoNumbers);
 
             return lottoNumbers;
             }

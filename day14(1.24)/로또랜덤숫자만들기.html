@@ -62,7 +62,7 @@
             let lottoNumbers = [];
 
             for(let i=0; i< 6; i++){
-                let random = Math.floor (Math.random()*45);
+                let random = Math.floor (Math.random()*45)+1;
                 console.log(random);
                 lottoNumbers[i] = random;
             }
@@ -82,7 +82,7 @@
             let lottoNumbers = [];
 
             while(lottoNumbers.length<6){
-                const random = Math.floor(Math.random() *45); //0~44
+                const random = Math.floor(Math.random() *45)+1; //0~44
                 if(!lottoNumbers.includes(random)){ //없으면
                     lottoNumbers.push(random);
                 }

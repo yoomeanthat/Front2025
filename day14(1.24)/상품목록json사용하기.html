@@ -6,25 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS3 애니메이션</title>
     <style>
+        #wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
         .prod-list {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            
         }
 
 
-        
+
 
         /*  상품  아이템  box */
-        .prod-list li {           
+        .prod-list li {
             padding: 0;
             margin: 10px;
             text-align: center;
             border: 1px solid rgb(223, 14, 14);
         }
 
-        .prod-list img {             
+        .prod-list img {
             width: 300px;
             height: 200px;
         }
@@ -35,7 +41,7 @@
 </head>
 
 <body>
-    <h1>신상품 목록</h1>
+    
     <div id="wrap">
         <ul class="prod-list">
             <!-- JavaScript에서 동적으로 상품 항목이 추가하기  -->
@@ -49,14 +55,14 @@
                 id: 1,
                 title: "상품 1",
                 description: "아주 좋아요  ",
-                price: "12,345원",
+                price: "12,300원",
                 image: "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSRTbtzf1Mp52cmK2-fUMECKB-XiYhEpm3cPpqskbz2YjC8mt6h8H93LFTaRb5ZiX4ZN6hM8bVH3_HtGeb4dqw"
             },
             {
                 id: 2,
                 title: "상품 2",
                 description: "활용도가 좋아요 ",
-                price: "12,345원",
+                price: "12,300원",
                 image: "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSRTbtzf1Mp52cmK2-fUMECKB-XiYhEpm3cPpqskbz2YjC8mt6h8H93LFTaRb5ZiX4ZN6hM8bVH3_HtGeb4dqw"
             },
             {
@@ -72,14 +78,14 @@
         // 상품 리스트 동적 추가
         const productList = document.querySelector('.prod-list');
 
-        products.forEach(product => {
+        products.forEach(item => {
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src="${product.image}" alt="${product.title}">
+                <img src="${item.image}" alt="${item.title}">
                 <div class="caption">
-                    <h1>${product.title}</h1>
-                    <p>${product.description}</p>
-                    <p>가격 : ${product.price}</p>
+                    <h1>${item.title}</h1>
+                    <p>${item.description}</p>
+                    <p>가격 : ${item.price}</p>
                 </div>
             `;
 

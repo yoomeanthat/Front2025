@@ -27,3 +27,5 @@ flex-direction: column;
 
 6.
 day13(1.23)\test.html
+
+7.setTimeout  setInterval

@@ -3,53 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>문구 애니메이션</title>
 
     <style>
-        .wrap{
+        .wrap {
             height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        .gallery{
+        .gallery {
             height: 50px;
-            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
         }
     </style>
 
     <script>
+        let message = [
+            "곧 설연휴 시작 !!! ^^ 신난다 !!",
+            "프론트 프로젝트 곧 시작 합니다!! 재미있게 해 줘요 🍔 🍟",
+            "날씨가 넘 추워요 감기 조심",
+            "설연휴 잘 보내고 와요 !!",
+            "for, if, 1차원배열, 함수 연습 연습",
+            "함수가 별거냐 ^^",
+            "배열이 별거냐 ^^"
+        ];
+        let index = 0;
 
-        //message배열의 요소의 내용이 순차적으로 바뀔 수 있도록 한다
-        let message=[ "곧 설연휴 시작 !!! ^^ 신난다 !! " ,"프론트 프로젝트 곧 시작 합니다!! 재미있게 해 줘요  🍔 🍟  ",  "날씨가 넘 추워요 감기 조심  " ,"설연휴 잘 보내고 와요 !!"   ,"for , if, 1차원배열, 함수 연습 연습" ,"함수가 별거냐 ^^" , "배열이 별거냐 ^^ "] ;
-        let index=0;
-
-        function next(){
-            alert(message[index]);
-            index++; //index = index +1
-
-            if(index >= message.length){
-                index=0;
-            }
-
+        function next() {
             let gallery = document.querySelector(".gallery");
-            gallery.animate(
-                        {transform: [                          /* transform   translate 위치 이동 */
-                        'translateY(100%)',    //시작          요소를 자신의 높이의 100%만큼 아래로 이동.
-                        'translateY(0px)'      //도착          요소를 원래 위치로 되돌림.
-                        ]},
 
-                        {duration:2000 }
-                    );
+            // 현재 위치 아래로 이동하는 애니메이션 적용
+            gallery.style.transform = "translateY(100%)";
 
-                    
+            // 일정 시간 후 새로운 메시지 표시 후 다시 원래 위치로 이동
+            setTimeout(() => {
+                gallery.innerHTML = message[index];
+                gallery.style.transform = "translateY(0)"; // 원래 위치로 복귀
+                index++;
+
+                if (index >= message.length) {
+                    index = 0;
+                }
+            }, 500); // 애니메이션 시간과 맞춤 (0.3초 후 변경)
         }
-
     </script>
 </head>
 <body>
-    
-
     <div class="wrap">
-        <div class="gallery"></div>
+        <div class="gallery">버튼을 눌러보세요!</div>
     </div>
 
     <button onclick="next()">다음</button>

@@ -10,9 +10,7 @@
     <script>
 
         let menu = prompt("아이스아메리카노 , 라떼 , 아이스티 선택하세요");
-        let qty = prompt("수량을 선택하세요");
-
-        qty = parseInt(qty);
+        
 
 
         //가격
@@ -29,8 +27,12 @@
                 break;
             default:
                 alert("없는 메뉴");
+                break;
         }
 
+        let qty = prompt("수량을 선택하세요");
+
+        qty = parseInt(qty);
 
         //주문금액 구하기
         let amount = qty * price;
