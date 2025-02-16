@@ -11,15 +11,30 @@
 
         while(true){
             let su1=prompt("숫자를 입력하세요");
-            su1=parseInt(su1);
+            su1=parseFloat(su1); //소수점을 버리는 parseFloat를 사용
 
-            if(su1<0)break;
-            
+            if(isNaN(su1)){
+                alert("숫자가 아닙니다");
+                continue;
+            }
+
+            if(su1<0){
+                alert("0이상의 정수를 입력해주세요")
+                continue;
+            }
+
+            if(!Number.isInteger(su1)){
+                alert("정수를 입력해주세요."); // 정수가 아닌 경우 다시 입력받음
+                continue;
+            }
+
             if(su1%2==0){
                 alert("짝수입니다");
-            }else{
+            }
+            else{
                 alert("홀수입니다");
             }
+            break;
         }
 
     </script>
