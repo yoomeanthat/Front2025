@@ -28,4 +28,9 @@ flex-direction: column;
 6.
 day13(1.23)\test.html
 
-7.setTimeout  setInterval
+7.
+setTimeout  setInterval
+
+8.
+gap: 20px
+flex-direction: column; => 아이템들을 세로로 나열한다
