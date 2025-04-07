@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>가위바위보 게임</title>
+</head>
+
+<body>
+
+   <script>
+      const showImageWithLabel = (imgPath, label) => {
+         const container = document.createElement('div');
+         container.style.display = 'inline-block';
+         container.style.margin = '10px';
+         container.style.textAlign = 'center';
+
+         const img = document.createElement('img');
+         img.src = imgPath;
+         img.alt = label;
+         img.style.width = '200px';
+
+         const caption = document.createElement('p');
+         caption.textContent = label;
+
+         container.appendChild(img);
+         container.appendChild(caption);
+         document.body.appendChild(container);
+      };
+
+      const showResult = (user, computer, result) => {
+         alert(`사용자: ${user}\n컴퓨터: ${computer}\n${result}`);
+         showImageWithLabel(`images/${user}.png`, '사용자');
+         showImageWithLabel(`images/${computer}.png`, '컴퓨터');
+      };
+
+      const choices = ["가위", "바위", "보"];
+
+      while (true) {
+         let userInput = prompt("가위 바위 보 중에서 선택하세요 (가위, 바위, 보)");
+         if (!userInput) continue;
+
+         userInput = userInput.trim();
+
+         if (!choices.includes(userInput)) {
+            alert("잘못된 입력입니다. 가위, 바위, 보 중에서 입력해주세요.");
+            continue;
+         }
+
+         const user = userInput;
+         const computer = choices[Math.floor(Math.random() * 3)];
+
+         if (user === computer) {
+            alert(`사용자: ${user}\n컴퓨터: ${computer}\n무승부`);
+            continue;
+         }
+
+         let result = "";
+
+         if (
+            (user === "가위" && computer === "보") ||
+            (user === "바위" && computer === "가위") ||
+            (user === "보" && computer === "바위")
+         ) {
+            result = "승리";
+         } else {
+            result = "패배";
+         }
+
+         showResult(user, computer, result);
+         break;
+      }
+   </script>
+
+   
+</body>
+
+</html>
