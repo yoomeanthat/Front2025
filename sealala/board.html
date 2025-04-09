@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환자 치료 기록</title>
+    <script>
+        function init() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                document.getElementById("welcomeMessage").innerText = `${loggedInUser}님의 진료 기록`;
+            } else {
+                alert("로그인이 필요합니다!");
+                window.location.href = "#";
+            }
+            displayPosts();
+        }
+
+        function submitPost() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (!loggedInUser) {
+                alert("로그인이 필요합니다!");
+                window.location.href = "#";
+                return;
+            }
+
+            const title1 = document.getElementById("postTitle1").value;
+            const title2 = document.getElementById("postTitle2").value;
+            const title3 = document.getElementById("postTitle3").value;
+            const content = document.getElementById("postContent").value;
+
+            if (!title1 || !content || !title2 || !title3) {
+                alert("제목과 내용을 입력하세요.");
+                return;
+            }
+
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+            let newPost = {title1, title2, title3, content };
+            posts.push(newPost);
+
+            localStorage.setItem("posts", JSON.stringify(posts));
+
+            alert("게시글이 등록되었습니다!");
+            displayPosts();
+
+            window.location.href = "#";
+        }
+
+        function displayPosts() {
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+            let board = document.getElementById("postList");
+
+            board.innerHTML = "";
+
+            posts.forEach(post => {
+                let postItem = document.createElement("li");
+                postItem.innerHTML = `
+                    <strong>환자 성함:</strong> ${post.title1}<br>
+                    <strong>환자 생년월일:</strong> ${post.title2}<br>
+                    <strong>환자 연락처:</strong> ${post.title3}<br>
+                    <p>${post.content}</p>
+                    <hr>
+                `;
+                board.appendChild(postItem);
+            });
+        }
+
+    </script>
+    <style>
+        .check {
+            width:1000px;
+            margin:0 auto;
+        }
+
+        .check h2 {
+            text-align: center;
+            
+        }
+
+        .submit {
+            width: 1000px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #postTitle1 {
+            min-width: 300px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        #postTitle2 {
+            min-width: 300px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        #postTitle3 {
+            min-width: 300px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        #postContent {
+            margin-top: 20px;
+            min-width: 600px;
+            font-size: 15px;
+            height: 100px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        .submit button {
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .submit button:hover {
+            background-color: #999999;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+
+<body onload="init()">
+    <a href="#"></a>
+    <div class="submit">
+        <h2 id="welcomeMessage"></h2>
+        <h2>치료 내용 작성</h2>
+        <p>작성자: <span id="author"></span></p>
+        <input type="text" id="postTitle1" placeholder="환자 작성용: 성함">
+        <input type="text" id="postTitle2" placeholder="환자 작성용: 생년월윌 ex)991214">
+        <input type="text" id="postTitle3" placeholder="환자 작성용: 연락처 ex) 010 XXXX XXXX">
+        <textarea id="postContent" placeholder="직원 기록용: 날짜 및 시간, 사고내용, 사고부위, 사고 장소, 치료 내용, 응대한 직원 이름"></textarea><br>
+        <button onclick="submitPost()">제출</button>
+    </div>
+    <hr>
+    <div class="check">
+        <h2>환자 정보 및 치료 내용</h2>
+        <ul id="postList"></ul>
+    </div>
+    <script>
+        document.getElementById("author").innerText = sessionStorage.getItem("loggedInUser") || "로그인 필요";
+    </script>
+
+</body>
+
+</html>
