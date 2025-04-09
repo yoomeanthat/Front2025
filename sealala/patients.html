@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <script>
+        function init() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                document.getElementById("welcomeMessage").innerText = `${loggedInUser}님, 환영합니다!`;
+            } else {
+                alert("로그인이 필요합니다!");
+                window.location.href = "/대성학원/login.html";
+            }
+            displayPosts();
+        }
+
+        function submitPost() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (!loggedInUser) {
+                alert("로그인이 필요합니다!");
+                window.location.href = "/대성학원/login.html";
+                return;
+            }
+
+            const title = document.getElementById("postTitle").value;
+            const content = document.getElementById("postContent").value;
+
+            if (!title || !content) {
+                alert("제목과 내용을 입력하세요.");
+                return;
+            }
+
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+            let newPost = { author: loggedInUser, title, content };
+            posts.push(newPost);
+
+            localStorage.setItem("posts", JSON.stringify(posts));
+
+            alert("게시글이 등록되었습니다!");
+            displayPosts();
+
+            window.location.href = "/대성학원/mainscreen.html";
+        }
+
+        function displayPosts() {
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+            let board = document.getElementById("postList");
+
+            board.innerHTML = "";
+
+            posts.forEach(post => {
+                let postItem = document.createElement("li");
+                postItem.innerHTML = `
+                    <strong>작성자:</strong> ${post.author}<br>
+                    <strong>제목:</strong> ${post.title}<br>
+                    <p>${post.content}</p>
+                    <hr>
+                `;
+                board.appendChild(postItem);
+            });
+        }
+
+    </script>
+    <style>
+        .check {
+            width:1000px;
+            margin:0 auto;
+        }
+
+        .check h2 {
+            text-align: center;
+            
+        }
+
+        .submit {
+            width: 1000px;
+            height: 450px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #postTitle {
+            min-width: 600px;
+            height: 30px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        #postContent {
+            margin-top: 20px;
+            min-width: 600px;
+            height: 200px;
+            border-radius: 8px;
+            border: 0.5px solid #999999;
+        }
+
+        .submit button {
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 8px;
+            color: black;
+        }
+
+        .submit button:hover {
+            background-color: #999999;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+
+<body onload="init()">
+    <a href="/대성학원/mainscreen.html">메인으로 이동하기</a>
+    <div class="submit">
+        <h2 id="welcomeMessage"></h2>
+        <h2>게시글 작성</h2>
+        <p>작성자: <span id="author"></span></p>
+        <input type="text" id="postTitle" placeholder="제목">
+        <textarea id="postContent" placeholder="내용"></textarea><br>
+        <button onclick="submitPost()">게시하기</button>
+    </div>
+    <hr>
+    <div class="check">
+        <h2>게시글 목록</h2>
+        <ul id="postList"></ul>
+    </div>
+    <script>
+        document.getElementById("author").innerText = sessionStorage.getItem("loggedInUser") || "로그인 필요";
+    </script>
+
+</body>
+
+</html>
