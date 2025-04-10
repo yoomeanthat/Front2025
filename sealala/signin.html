@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin youmeanthat</title>
+    <style>
+        * {
+            font-family: 'Noto Sans KR', 'Roboto', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* 회원가입영역 */
+        .big_wrap {
+            width: 420px;
+            border: none;
+            border-radius: 16px;
+            margin: 0 auto;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            background-color: #fff;
+            padding: 30px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .big_wrap:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.15);
+        }
+
+        .wrap {
+            width: 100%;
+            text-align: center;
+        }
+
+        .img_wrap {
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .img_wrap:hover {
+            transform: scale(1.05);
+        }
+
+        .img_wrap img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .wrap input[type="text"],
+        .wrap input[type="email"],
+        .wrap input[type="username"],
+        .wrap input[type="password"] {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            border: 1px solid #E1E1E1;
+            padding: 0 16px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .wrap input:focus {
+            border-color: #00AFAD;
+            box-shadow: 0 0 0 2px rgba(0, 175, 173, 0.2);
+        }
+
+        .wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .wrap button {
+            width: 100%;
+            height: 50px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 12px;
+            background-color: #00AFAD;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .wrap button:hover {
+            background-color: #009695;
+            transform: translateY(-2px);
+        }
+
+        .loginbtn {
+            background-color: #fff !important;
+            border: 2px solid #00AFAD !important;
+            color: #00AFAD !important;
+        }
+
+        .loginbtn:hover {
+            background-color: #f0f0f0 !important;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            display: inline-block;
+            color: #00AFAD;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 480px) {
+            .big_wrap {
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <script>
+        // 페이지 로드시 사용자 목록을 콘솔에만 출력
+        window.onload = function () {
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            console.log("저장된 사용자 목록:", users);
+            // 화면에는 출력하지 않음 (주석 처리)
+            // const container = document.createElement("div");
+            // container.innerHTML = "<h3>저장된 사용자 목록</h3><pre>" + JSON.stringify(users, null, 2) + "</pre>";
+            // document.body.appendChild(container);
+            
+        };
+
+        function signin() {
+            let id = document.getElementById("userid").value;
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let pw = document.getElementById("password").value;
+            let pwconfirm = document.getElementById("pwconfirm").value;
+
+            if (!id || !name || !email || !pw || !pwconfirm) {
+                alert("모든 필드를 입력하세요.");
+                return;
+            }
+            if (pw !== pwconfirm) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            if (users.some(user => user.userid === id)) {
+                alert("이미 존재하는 아이디입니다. 다른 아이디를 사용하세요.");
+                return;
+            }
+
+            users.push({ userid: id, username: name, email: email, password: pw });
+
+            localStorage.setItem("users", JSON.stringify(users));
+            
+            // 새로운 사용자 추가 후 콘솔에 업데이트된 목록 출력
+            console.log("업데이트된 사용자 목록:", users);
+
+            alert("회원가입이 완료되었습니다!");
+
+            document.getElementById("userid").value = "";
+            document.getElementById("username").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("pwconfirm").value = "";
+
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 100);
+        }
+
+        // localStorage.clear(); = >저장된 사용자 제거 코드
+    </script>
+</head>
+
+<body>
+    <div class="big_wrap">
+        <div class="wrap">
+            <div class="img_wrap">
+                <a href="/mainscreen.html">
+                    <img src="/images/sealalamark.png" alt="로고">
+                </a>
+            </div>
+            <input type="text" placeholder="아이디를 입력하세요" id="userid">
+            <input type="username" placeholder="이름을 입력하세요" id="username">
+            <input type="email" placeholder="이메일을 입력하세요" id="email">
+            <input type="password" placeholder="비밀번호를 입력하세요" id="password">
+            <input type="password" placeholder="비밀번호를 확인하세요" id="pwconfirm">
+            <button onclick="signin()">회원가입</button>
+            <a href="/login.html" class="login-link">
+                이미 계정이 있으신가요? 로그인하기
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
