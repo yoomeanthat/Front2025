@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>씨랄라 워터파크 - 환자 치료 기록</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h4{
+            color: red;
+        }
+
+        .image_box {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            width: 150px;
+            height: 50px;
+            background-image: url('./images/sealalamark.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            image-rendering: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .image_box:hover {
+            transform: scale(1.05);
+        }
+
+        .top {
+            position: relative;
+            height: 150px;
+            background: linear-gradient(135deg, #40c4ff, #0288d1);
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: 700;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .top button {
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            width: 220px;
+            height: 50px;
+            background-color: #fff;
+            color: #0288d1;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .top button:hover {
+            background-color: #e1f5fe;
+            box-shadow: 0 6px 12px rgba(2, 136, 209, 0.2);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        #welcomeMessage {
+            color: #0288d1;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .submit {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .submit h2 {
+            color: #0288d1;
+            margin-bottom: 20px;
+            font-size: 24px;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .submit h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, #40c4ff, #0288d1);
+            border-radius: 3px;
+        }
+
+        .author-info {
+            background: rgba(2, 136, 209, 0.05);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            color: #0288d1;
+            font-weight: 500;
+            border: 1px solid rgba(2, 136, 209, 0.2);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            max-width: 500px;
+            height: 45px;
+            font-size: 15px;
+            padding: 0 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #40c4ff;
+            box-shadow: 0 0 0 3px rgba(64, 196, 255, 0.2);
+        }
+
+        textarea {
+            width: 90%;
+            max-width: 700px;
+            height: 150px;
+            padding: 15px;
+            font-size: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            resize: vertical;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #40c4ff;
+            box-shadow: 0 0 0 3px rgba(64, 196, 255, 0.2);
+        }
+
+        .submit button {
+            width: 180px;
+            height: 50px;
+            background: linear-gradient(135deg, #5ee7df, #2196f3);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .submit button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+            margin: 30px 0;
+        }
+
+        .check {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .check h2 {
+            color: #0288d1;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .check h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, #40c4ff, #0288d1);
+            border-radius: 3px;
+        }
+
+        #postList {
+            padding: 0;
+        }
+
+        #postList li {
+            list-style: none;
+            background: rgba(240, 248, 255, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0288d1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #postList li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        #postList li strong {
+            color: #0288d1;
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        #postList li p {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            white-space: pre-line;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .top {
+                height: 180px;
+                font-size: 28px;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .image_box {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin: 10px auto;
+            }
+
+            .top button {
+                position: relative;
+                top: 10px;
+                right: 0;
+                transform: none;
+                margin: 10px auto;
+            }
+
+            input[type="text"], textarea {
+                width: 95%;
+            }
+
+            #postList li strong {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top {
+                font-size: 22px;
+            }
+            
+            .submit h2, .check h2 {
+                font-size: 20px;
+            }
+            
+            .submit, .check {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="top">
+            <div class="image_box"></div>
+            씨랄라 워터파크 환자 치료 기록
+            <!-- <button onclick="window.location.href='#'">메인으로 돌아가기</button> -->
+        </div>
+
+        <div class="submit">
+            <h2 id="welcomeMessage"></h2>
+            <h2>치료 내용 작성</h2>
+            <div class="author-info">
+                작성자: <span id="author"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="postTitle1" placeholder="환자 작성용: 성함">
+                <input type="text" id="postTitle2" placeholder="환자 작성용: 생년월일 ex)991214">
+                <input type="text" id="postTitle3" placeholder="환자 작성용: 연락처 ex) 010-XXXX-XXXX">
+            </div>
+            <textarea id="postContent" placeholder="직원 기록용: 날짜 및 시간, 사고내용, 사고장소, 부상부위, 치료내용, 응대한 직원 이름"></textarea>
+            <h4>**시간, 사고내용, 사고장소, 부상부위, 치료내용, 응대한 직원 이름**</h4>
+            <br>
+            <button onclick="submitPost()">기록 제출</button>
+        </div>
+
+        <div class="check">
+            <h2>환자 정보 및 치료 내용</h2>
+            <ul id="postList"></ul>
+        </div>
+
+        <div class="footer">
+            © 2025 씨랄라 워터파크 환자 치료 기록 시스템 | copyright -김유민-
+        </div>
+    </div>
+
+    <script>
+        function init() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                document.getElementById("welcomeMessage").innerText = `${loggedInUser}님의 치료 기록`;
+            } else {
+                alert("로그인이 필요합니다!");
+                window.location.href = "#";
+            }
+            displayPosts();
+        }
+
+        function submitPost() {
+            const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+            if (!loggedInUser) {
+                alert("로그인이 필요합니다!");
+                window.location.href = "#";
+                return;
+            }
+
+            const title1 = document.getElementById("postTitle1").value;
+            const title2 = document.getElementById("postTitle2").value;
+            const title3 = document.getElementById("postTitle3").value;
+            const content = document.getElementById("postContent").value;
+
+            if (!title1 || !content || !title2 || !title3) {
+                alert("필드를 모두 입력하세요.");
+                return;
+            }
+
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+            let newPost = {title1, title2, title3, content };
+            posts.push(newPost);
+
+            localStorage.setItem("posts", JSON.stringify(posts));
+
+            alert("환자 치료 기록이 등록되었습니다!");
+            displayPosts();
+
+            // 폼 초기화
+            document.getElementById("postTitle1").value = "";
+            document.getElementById("postTitle2").value = "";
+            document.getElementById("postTitle3").value = "";
+            document.getElementById("postContent").value = "";
+        }
+
+        function displayPosts() {
+            let posts = JSON.parse(localStorage.getItem("posts")) || [];
+            let board = document.getElementById("postList");
+
+            board.innerHTML = "";
+
+            posts.forEach((post, index) => {
+                let postItem = document.createElement("li");
+                postItem.innerHTML = `
+                    <strong>환자 성함:</strong> ${post.title1}<br>
+                    <strong>환자 생년월일:</strong> ${post.title2}<br>
+                    <strong>환자 연락처:</strong> ${post.title3}<br>
+                    <p>${post.content}</p>
+                `;
+                board.appendChild(postItem);
+            });
+        }
+
+        document.getElementById("author").innerText = sessionStorage.getItem("loggedInUser") || "로그인 필요";
+    </script>
+</body>
+
+</html>
