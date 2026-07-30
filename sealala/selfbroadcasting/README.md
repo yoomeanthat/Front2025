@@ -150,4 +150,4 @@ Ks12m61p1cg     오존 플레이리스트 모음
 xTSfO4dWZ58     XIONT (30분)
 0sYiFOpstNg     2026년 7월 1주차 케이팝 최신곡 모음(12시간)
 ovIkD1XfXCE     프로미스나인 킬링보이스
-RXjZU06h1F4     빅뱅
+RXjZU06h1F4     빅뱅()
