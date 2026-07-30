@@ -33,4 +33,4 @@ setTimeout  setInterval
 
 8.
 gap: 20px
-flex-direction: column; => 아이템들을 세로로 나열한다
+flex-direction: column; => 아이템들을 세로로 나열한다# Sealala_broadcast

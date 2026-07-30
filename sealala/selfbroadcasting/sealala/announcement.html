@@ -30,17 +30,16 @@
     </div>
 
     <div class="youtube-container">
-      <iframe id="youtube-player" name="youtube-player"
-        src="https://www.youtube.com/embed/CBG8waSkazE?enablejsapi=1&autoplay=1&loop=1"
+      <iframe id="youtube-player"    
+        src="https://www.youtube.com/embed/i7fqdNW3pHo?enablejsapi=1&autoplay=1&loop=1"
         frameborder="0" allow="autoplay" allowfullscreen>
       </iframe>
-
     </div>
 
     <!-- 특이사항 칸과 버튼들 -->
     <div class="middle">
       <div class="notes-container">
-        <textarea placeholder="****특이사항 적어두기**** &#10; 금일 전달사항 근무자 필독 &#10; 금일의 음주계획"></textarea>
+        <textarea placeholder="****특이사항 적어두기**** &#10; 금일 전달사항 근무자 필독"></textarea>
       </div>
 
       <div class="trash-container">
@@ -85,7 +84,7 @@
         <button onclick="warning()">😘 윤배 사진 보러가기 😘</button>
         <button onclick="moveGame()">🎮 가위바위보 게임 🎮</button>
         <button onclick="moveLogin()"> 💊환자 기록💊 </button>
-        <button onclick="playSound('musics/breaktime.mp3')">🎵 테스트 방송🎵</button>
+        <button onclick="playSound('musics/breaktime.mp3')">🎵 쉬는시간 방송🎵</button>
       </div>
     </div>
 
@@ -103,7 +102,7 @@
 
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('youtube-player', {
-        videoId: 'ebPTIftheTw&',
+        videoId: '-hMVsGL-4nA',
         events: {
           'onReady': onPlayerReady
         }
@@ -112,7 +111,7 @@
 
     function onPlayerReady() {
       playerReady = true;
-      event.target.setVolume(20);
+      event.target.setVolume(35);
       /*
         *** 유튜브 볼륨 설정 ***
         'youtube-player' 의 src에 mute 설정이 되어있다면 제거 후
@@ -159,33 +158,107 @@
       const minutes = now.getMinutes();
       const seconds = now.getSeconds();
 
-      //10시 방송
+      /*
+      // 10시 쉬는시간 방송 : 10시 50분 진행
       if (minutes === 50 && seconds === 0 && hours === 10) {
         showAlert("쉬는 시간 방송 시작");
         playSound('musics/breaktime.mp3', () => { });
         console.log(`🕒 쉬는 시간 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
       }
+        */
 
-      //11~16시 방송
+      // 11~16시 쉬는시간 방송
       if (minutes === 47 && seconds === 0 && hours >= 11 && hours <= 16) {
         showAlert("쉬는 시간 방송 시작");
         playSound('musics/breaktime.mp3', () => { });
         console.log(`🕒 쉬는 시간 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
       }
 
-      //17시 쉬는 시간 방송 이후 마감 전 방송 (쉬는 시간 방송(29초 동안 재생) 이후 호루라기 불 시간 6초가 있음)
+
+      
+      // 버블캐논 방송 : 성수기 주말에 실행(토/일)
+      // 버블2시 26분 방송
+      if (
+        minutes === 26 && seconds === 0 && hours === 14 && (now.getDay() ===  0 || now.getDay() === 6)
+      ) {
+        showAlert("버블 캐논 방송 시작");
+        playSound('musics/bubble2.mp3', () => { });
+        console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
+      
+      
+      
+      // 버블캐논 방송: 비수기 주말 & 성수기 평일에 실행(월~금)
+      // 버블3시 26분 방송
+      // if (
+      //   minutes === 26 && seconds === 0 && hours === 15 && now.getDay() >= 1 && now.getDay() <= 5
+      // ) {
+      //   showAlert("버블 캐논 방송 시작");
+      //   playSound('musics/bubble3.mp3', () => {});
+      //   console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      // }
+      
+
+      
+      // 버블캐논 방송 : 성수기 주말에 실행(토/일)
+      // 버블4시 26분 방송
+      if (
+        minutes === 26 && seconds === 0 && hours === 16 && (now.getDay() ===0 || now.getDay() === 6)
+      ) {
+        showAlert("버블 캐논 방송 시작");
+        playSound('musics/bubble4.mp3', () => { });
+        console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
+      
+
+      /*
+      // 푸드코트 주문마감 5시 20분 방송 (6시로 수정 필요)
+      if (minutes === 20 && seconds === 0 && hours === 17) {
+        showAlert("푸드코트 주문마감 방송 시작");
+        playSound('musics/food520.mp3', () => { });
+        console.log(`🕒 푸드코트 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
+      */
+
+      //오래 잠수하기 이벤트 안내방송 멘트
+      // if (minutes === 47 && seconds ===32 && hours === 15 && (now.getDay() === 0 || now.getDay() === 6)) {
+      //   showAlert("오래 잠수하기 이벤트 안내방송 시작");
+      //   playSound('musics/hold_breath.mp3', () => { });
+      //   console.log(`🕒 오래 잠수하기 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      //  }
+
+      //17시 쉬는 시간 방송
       if (minutes === 47 && seconds === 0 && hours === 17) {
         showAlert("쉬는 시간 방송 시작");
         playSound('musics/breaktime.mp3', () => { });
         console.log(`🕒 쉬는 시간 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
 
-      } else if (minutes === 47 && seconds === 35 && hours === 17) {
-        showAlert("마감 전 방송 시작");
-        playSound('musics/lastbreaktime.mp3');
-        console.log(`🕒 마감전 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
       }
 
-      // 마감 방송(18시)
+      //마감 전 방송
+      if (minutes === 47 && seconds === 35 && hours === 17) {
+        showAlert("마감 전 방송 시작");
+        playSound('musics/lastbreaktime.mp3');
+        console.log(`🕒 마감 전 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
+
+      /*
+      //**8월 17일 이후 주석 처리**
+      //18시 쉬는 시간 방송 이후 마감 전 방송
+      if (minutes === 47 && seconds === 0 && hours === 18) {
+        showAlert("쉬는 시간 방송 시작");
+        playSound('musics/breaktime.mp3', () => { });
+        console.log(`🕒 쉬는 시간 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+
+      } else if (minutes === 47 && seconds === 35 && hours === 18) {
+        showAlert("마감 전 방송 시작");
+        playSound('musics/last750.mp3');
+        console.log(`🕒 마감전 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
+        */
+
+
+      // 마감 방송(18시 37분)
       if (minutes === 37 && seconds === 0 && hours === 18) {
         showAlert("이젠안녕 시작");
         playSound('musics/goodbye.mp3', () => {
@@ -215,7 +288,7 @@
 
     //갤러리 이동 경고 메서드
     function warning() {
-      const result = confirm("⚠경고⚠: 아는 사람의 🥵🥵나체🥵🥵를 볼수도 있습니다 계속 하시겠습니까?ヾ(´•👅•｀)ノ ");
+      const result = confirm("⚠경고⚠: 🥵🥵아는 사람을 볼수도 있습니다 계속 하시겠습니까?ヾ(´•👅•｀)ノ 🥵🥵");
       if (result) {
         //석배 갤러리 이동(내장 메서드)
         window.open("./gallery.html", "_blank");
