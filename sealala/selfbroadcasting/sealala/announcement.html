@@ -31,7 +31,11 @@
 
     <div class="youtube-container">
       <iframe id="youtube-player"    
-        src="https://www.youtube.com/embed/i7fqdNW3pHo?enablejsapi=1&autoplay=1&loop=1"
+<<<<<<< HEAD:sealala/selfbroadcasting/sealala/announcement.html
+        src="https://www.youtube.com/embed/-PkdqiIbcdA?enablejsapi=1&autoplay=1&loop=1"
+=======
+        src="https://www.youtube.com/embed/-0JJvgTYWRs?enablejsapi=1&autoplay=1&loop=1"
+>>>>>>> 928c8b9e580f621e0e68e0b1e2e6f8eef4b8da17:Front2025/sealala/selfbroadcasting/sealala/announcement.html
         frameborder="0" allow="autoplay" allowfullscreen>
       </iframe>
     </div>
@@ -176,6 +180,7 @@
 
 
       
+<<<<<<< HEAD:sealala/selfbroadcasting/sealala/announcement.html
       // 버블캐논 방송 : 성수기 주말에 실행(토/일)
       // 버블2시 26분 방송
       if (
@@ -207,10 +212,46 @@
       ) {
         showAlert("버블 캐논 방송 시작");
         playSound('musics/bubble4.mp3', () => { });
+=======
+      // 버블캐논 방송 : 성수기 주말에 실행
+      // 버블2시 26분 방송
+      // if (
+      //   minutes === 26 && seconds === 0 && hours === 14 && (now.getDay() >= 0 && now.getDay() <= 6)
+      // ) {
+      //   showAlert("버블 캐논 방송 시작");
+      //   playSound('musics/bubble2.mp3', () => { });
+      //   console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      // }
+      
+      
+      
+      // 버블캐논 방송: 비수기 주말 & 성수기 평일에 실행
+      // 버블3시 26분 방송
+      if (
+        minutes === 26 && seconds === 0 && hours === 15 && now.getDay() >= 0 && now.getDay() <= 6
+      ) {
+        showAlert("버블 캐논 방송 시작");
+        playSound('musics/bubble3.mp3', () => {});
+>>>>>>> 928c8b9e580f621e0e68e0b1e2e6f8eef4b8da17:Front2025/sealala/selfbroadcasting/sealala/announcement.html
         console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
       }
       
 
+<<<<<<< HEAD:sealala/selfbroadcasting/sealala/announcement.html
+=======
+      
+      // 버블캐논 방송 : 성수기 주말에 실행
+      // 버블4시 26분 방송
+      // if (
+      //   minutes === 26 && seconds === 0 && hours === 16 && (now.getDay() >= 0 && now.getDay() <= 6)
+      // ) {
+      //   showAlert("버블 캐논 방송 시작");
+      //   playSound('musics/bubble4.mp3', () => { });
+      //   console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      // }
+      
+
+>>>>>>> 928c8b9e580f621e0e68e0b1e2e6f8eef4b8da17:Front2025/sealala/selfbroadcasting/sealala/announcement.html
       /*
       // 푸드코트 주문마감 5시 20분 방송 (6시로 수정 필요)
       if (minutes === 20 && seconds === 0 && hours === 17) {

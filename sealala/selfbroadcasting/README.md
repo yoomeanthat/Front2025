@@ -37,8 +37,6 @@ flex-direction: column; => 아이템들을 세로로 나열한다
 
 
 
-
-※※<욕설 나오는 곡 금지>※※
 9.노래 가능
 088DhoP0SaU     10cm                  (1시간)
 CBG8waSkazE     2Ne1                  (1시간)
@@ -73,6 +71,7 @@ vyU-rMfgV80     발라드 (4)             (1시간)
 WGkqjzJOXj8     발라드 (5)           (1시간)
 VoBxz3sF-0E     버스커버스커         (1시간)
 2xrC70Zt3lM     비오는 날 듣는 플리     (1시간 20분)
+RIUq-yvToPI     백예린                  (2시간 30분)
 s-JK1qxx6nM     백예린                  (2시간)
 B57ZgrQtOls     여름 걸그룹 케이팝      (1시간 20분)
 5YKL_1wbUnw     위너                        (1시간)
@@ -96,7 +95,6 @@ xcFNjddCvAo     헤이즈
 iXTxoZ0M0QY     한로로 노래모음
 91EbkS1e0Jg     화사, 우즈, 등 가을 노래 미친것ㅎ (50분)
 -PkdqiIbcdA     악뮤 신곡포함 노래모음(251분)
-ij24WvJtKso     여름 감성 노래 (ph-1, 릴러말즈 등등)
 
 ==================================================== 아래는 50분 이하
 
@@ -107,11 +105,12 @@ QvWvmP4FDU0     다이나믹듀오,리쌍,슈프림팀,긱스
 GrzPs0nEXCI     이현
 hn4XiirKdNE     멜로망스 킬링보이스
 Vo1bTkDALpU     노을 킬링보이스
+RyFEWrif2rA     카더가든 킬링보이스
 wDfqXR_5yyQ     아이유 킬링보이스
 3Hr35Kr2aXA     악뮤 킬링이스
 JbUSH6ZZ1LU     폴킴 킬링보이스
-8SN_xX4nhs     규현 킬링보이스
-6RbBdASvkQ     성시경 킬링보이스
+-8SN_xX4nhs     규현 킬링보이스
+6RQ-bBdASvk     성시경 킬링보이스
 k02azAGf5ew     양다일 킬링보이스
 iibjfV7_n20     신용재 킬링보이스
 5e7qMOZvgwg     10cm 킬링보이스 pt1
@@ -133,7 +132,7 @@ kBNneIgJ0CI     아이유(36분)
 R2zKgztMnTM     보이넥스트도어 노래모음 (22분)
 4749dbGTNxw     서동현(36분)
 cV2zpig7Dv4     이하이&백예린   (20분)
-u_t4oHfwnc-     볼빨간사춘기 킬링보이스 (23분)
+u_nc-t4oHfw     볼빨간사춘기 킬링보이스 (23분)
 uiFiX9SVGMo     인피니트 킬링벌스 (23분)
 5C3f01ZiovA     ft아일랜드 킬링벌스 (23분)
 cBN7T8WjvXc     허각 킬링보이스(20분)
@@ -148,6 +147,4 @@ vwYApf-jO0w     빈첸 (17분)
 RO4pO4WXuz0     만약에 우리 플레이리스트 (23분)
 Ks12m61p1cg     오존 플레이리스트 모음
 xTSfO4dWZ58     XIONT (30분)
-0sYiFOpstNg     2026년 7월 1주차 케이팝 최신곡 모음(12시간)
-ovIkD1XfXCE     프로미스나인 킬링보이스
-RXjZU06h1F4     빅뱅()
+W02TAZTRcV4     빅뱅 (34분)
