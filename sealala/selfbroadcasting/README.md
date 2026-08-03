@@ -8,9 +8,6 @@ git push origin main
 --원격주소 확인--
 git remote -v
 
-git config --global user.email "yoomeani1214@gmail.com"
-git config --global user.name "yoomeanthat"
-
 1.
 flex-wrap: wrap;    /* 줄바꿈*/
 
