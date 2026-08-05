@@ -145,3 +145,5 @@ RO4pO4WXuz0     만약에 우리 플레이리스트 (23분)
 Ks12m61p1cg     오존 플레이리스트 모음
 xTSfO4dWZ58     XIONT (30분)
 W02TAZTRcV4     빅뱅 (34분)
+MxDxCX6txjQ     인기차트 8월
+NRZ1BYcN0m8     혁오
