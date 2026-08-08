@@ -92,6 +92,12 @@ xcFNjddCvAo     헤이즈
 iXTxoZ0M0QY     한로로 노래모음
 91EbkS1e0Jg     화사, 우즈, 등 가을 노래 미친것ㅎ (50분)
 -PkdqiIbcdA     악뮤 신곡포함 노래모음(251분)
+t61Lf-g87es     빅뱅 (100분)
+LPlK4jCAeKI     2010s 여돌 (1시간)
+rpg89TGqwMs     인피니트 ^^♡ (1시간)
+i420Hzts21k     드라마 OST (53분)
+YsWaftG0D6U     팝송 (59분)
+JvCZE4bp0js     백예린 (1시간 12분)
 
 ==================================================== 아래는 50분 이하
 
@@ -145,5 +151,10 @@ RO4pO4WXuz0     만약에 우리 플레이리스트 (23분)
 Ks12m61p1cg     오존 플레이리스트 모음
 xTSfO4dWZ58     XIONT (30분)
 W02TAZTRcV4     빅뱅 (34분)
-MxDxCX6txjQ     인기차트 8월
 NRZ1BYcN0m8     혁오
+c9f4nbbsrO4     GD (45분)
+nTd71RjAk2w     그시절 드라마 OST (49분)
+ucMbsxYdE2E     인디 플리 (44분)
+6iLczIQ83dg     인디 플리2 (59분)
+C9LNocG4Z0w     감성 힘합 (29분)
+LJJ9RVSDASE     박진영 킬링보이스 (21분)
