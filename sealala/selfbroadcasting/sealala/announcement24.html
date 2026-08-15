@@ -31,7 +31,7 @@
 
     <div class="youtube-container">
       <iframe id="youtube-player"    
-        src="https://www.youtube.com/embed/C9LNocG4Z0w?enablejsapi=1&autoplay=1&loop=1"
+        src="https://www.youtube.com/embed/ovIkD1XfXCE?enablejsapi=1&autoplay=1&loop=1"
         frameborder="0" allow="autoplay" allowfullscreen>
       </iframe>
     </div>
@@ -89,7 +89,7 @@
     </div>
 
     <div class="footer">
-      © 2025 씨랄라 워터파크 방송 시스템 | copyright -김유민- | <a href="#">비밀링크</a>
+      © 씨랄라 워터파크 방송 시스템 ver2026.08.15 | copyright -김유민- | <a href="#">비밀링크</a>
     </div>
   </div>
 
@@ -168,7 +168,7 @@
         */
 
       // 11~16시 쉬는시간 방송
-      if (minutes === 47 && seconds === 0 && hours >= 11 && hours <= 16) {
+      if (minutes === 47 && seconds === 0 && hours >= 10 && hours <= 16) {
         showAlert("쉬는 시간 방송 시작");
         playSound('musics/breaktime.mp3', () => { });
         console.log(`🕒 쉬는 시간 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
