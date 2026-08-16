@@ -31,7 +31,7 @@
 
     <div class="youtube-container">
       <iframe id="youtube-player"    
-        src="https://www.youtube.com/embed/4749dbGTNxw?enablejsapi=1&autoplay=1&loop=1"
+        src="https://www.youtube.com/embed/iXTxoZ0M0QY?enablejsapi=1&autoplay=1&loop=1"
     
         frameborder="0" allow="autoplay" allowfullscreen>
       </iframe>
@@ -260,14 +260,14 @@
 
 
       // 마감 방송(18시 37분)
-      if (minutes === 34 && seconds === 0 && hours === 18) {
+      if (minutes === 37 && seconds === 0 && hours === 18) {
         showAlert("이젠안녕 시작");
         playSound('musics/goodbye.mp3', () => {
           checkAndPlaySound
         });
         console.log(`🕒 이젠안녕 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
 
-      } else if (minutes === 38 && seconds === 45 && hours === 18) {
+      } else if (minutes === 41 && seconds === 45 && hours === 18) {
         showAlert("하이라이트 시작");
         playSound('musics/highlight.mp3');
         console.log(`🕒 하이라이트 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
