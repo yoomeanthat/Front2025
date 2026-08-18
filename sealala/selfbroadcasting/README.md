@@ -148,7 +148,7 @@ vwYApf-jO0w     빈첸 (17분)
 RO4pO4WXuz0     만약에 우리 플레이리스트 (23분)
 Ks12m61p1cg     오존 플레이리스트 모음
 xTSfO4dWZ58     XIONT (30분)
-W02TAZTRcV4     빅뱅 (34분)
+4749dbGTNxw     빅뱅 (34분)
 NRZ1BYcN0m8     혁오
 c9f4nbbsrO4     GD (45분)
 nTd71RjAk2w     그시절 드라마 OST (49분)
