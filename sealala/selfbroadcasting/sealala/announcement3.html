@@ -190,13 +190,13 @@
       
       // 버블캐논 방송: 비수기 주말 & 성수기 평일에 실행(월~금)
       // 버블3시 26분 방송
-      // if (
-      //   minutes === 26 && seconds === 0 && hours === 15
-      // ) {
-      //   showAlert("버블 캐논 방송 시작");
-      //   playSound('musics/bubble3.mp3', () => {});
-      //   console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
-      // }
+      if (
+        minutes === 26 && seconds === 0 && hours === 15
+      ) {
+        showAlert("버블 캐논 방송 시작");
+        playSound('musics/bubble3.mp3', () => {});
+        console.log(`🕒 버블 캐논 방송 시작 시각 → ${hours}시 ${minutes}분 ${seconds}초`);
+      }
       
 
       
