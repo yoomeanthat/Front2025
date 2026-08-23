@@ -96,7 +96,10 @@ rpg89TGqwMs     인피니트 ^^♡ (1시간)
 i420Hzts21k     드라마 OST (53분)
 YsWaftG0D6U     팝송 (59분)
 JvCZE4bp0js     백예린 (1시간 12분)
-ECeADxu25po     여름 페스티벌 공략집 (DAY6, LUCY, QWER, 이무진 국내 밴드 플리) 2시간 24분
+ECeADxu25po     여름 페스티벌 공략집 (DAY6, LUCY, QWER, 이무진 국내 밴드 플리) (2시간 24분)
+CRTpdIrftAM     비긴어게인 고막 남친 플레이리스트 (크러쉬, 폴킴, 정세운, 정승환, 적재) (1시간)
+TMSdK5YTiww     기억을 걷는 시간, 그 뒤에 남은 노래들 (넬, 오왠, 하현상) (1시간)
+0h3yfnF6SpI     2026년 8월 K-POP 인기 Playlist 20곡 | RESCENE CORTIS I.O.I aespa ILLIT (1시간 8분)
 
 ==================================================== 아래는 50분 이하
 
@@ -159,3 +162,4 @@ C9LNocG4Z0w     감성 힘합 (29분)
 LJJ9RVSDASE     박진영 킬링보이스 (21분)
 j2OctFhK4MQ     여름 필수 플리 (27분)
 qt_vrphUK50     호불호 없는 인디 (검정치마, 혁오, 카더가든, 잔나비) (43분)
+c0c1KcvxJzw     블랙핑크 (27분)
