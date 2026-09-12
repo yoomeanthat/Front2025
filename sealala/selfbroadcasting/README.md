@@ -100,6 +100,11 @@ ECeADxu25po     여름 페스티벌 공략집 (DAY6, LUCY, QWER, 이무진 국�
 CRTpdIrftAM     비긴어게인 고막 남친 플레이리스트 (크러쉬, 폴킴, 정세운, 정승환, 적재) (1시간)
 TMSdK5YTiww     기억을 걷는 시간, 그 뒤에 남은 노래들 (넬, 오왠, 하현상) (1시간)
 0h3yfnF6SpI     2026년 8월 K-POP 인기 Playlist 20곡 | RESCENE CORTIS I.O.I aespa ILLIT (1시간 8분)
+CfyNJabT9zE     너드커넥션 플리 (1시간 24분)
+JItSrpgc_RY     로이킴 플리 (1시간 11분)
+SsZKYrlI0Mk     헤이즈 플리 (1시간 9분)
+kiyyEvsJ8Ys     우원재 플리 (59분)
+8wrFVWC3WDc     코리안 힙합의 수장 AOMG (우원재, 로꼬, GRAY) (58분)
 
 ==================================================== 아래는 50분 이하
 
@@ -163,3 +168,8 @@ LJJ9RVSDASE     박진영 킬링보이스 (21분)
 j2OctFhK4MQ     여름 필수 플리 (27분)
 qt_vrphUK50     호불호 없는 인디 (검정치마, 혁오, 카더가든, 잔나비) (43분)
 c0c1KcvxJzw     블랙핑크 (27분)
+Mk-h-I91aq4     버즈 킬링보이스
+AhtFPe1FSDA     워너원 플리 (28분)
+11AWYjX_Xjk     아일릿 플리 (26분)
+HaTcSa6bReQ     도깨비 OST 전곡 (57분)
+zWe4j7Yu6cE     살아보지 못한 시간들 | 감성힙합 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽(31분)
