@@ -105,6 +105,10 @@ JItSrpgc_RY     로이킴 플리 (1시간 11분)
 SsZKYrlI0Mk     헤이즈 플리 (1시간 9분)
 kiyyEvsJ8Ys     우원재 플리 (59분)
 8wrFVWC3WDc     코리안 힙합의 수장 AOMG (우원재, 로꼬, GRAY) (58분)
+vhHAsUWPUp8     Bruno Mars playlist (1시간 23분)
+zE0kyw5vXzA     학창시절 mp3에 담아둔 15곡 (54분)
+dFPKgG7SbIk     인생 드라마·영화 OST 모아 봅니다 (1시간 7분)
+
 
 ==================================================== 아래는 50분 이하
 
@@ -173,3 +177,4 @@ AhtFPe1FSDA     워너원 플리 (28분)
 11AWYjX_Xjk     아일릿 플리 (26분)
 HaTcSa6bReQ     도깨비 OST 전곡 (57분)
 zWe4j7Yu6cE     살아보지 못한 시간들 | 감성힙합 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽(31분)
+k652OzxPjQ0     존박 커버 모음
