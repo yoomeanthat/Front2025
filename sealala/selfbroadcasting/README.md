@@ -108,6 +108,7 @@ kiyyEvsJ8Ys     우원재 플리 (59분)
 vhHAsUWPUp8     Bruno Mars playlist (1시간 23분)
 zE0kyw5vXzA     학창시절 mp3에 담아둔 15곡 (54분)
 dFPKgG7SbIk     인생 드라마·영화 OST 모아 봅니다 (1시간 7분)
+KRZIahb1VEQ     크러쉬 찐팬이 추천하는 Playlist
 
 
 ==================================================== 아래는 50분 이하
@@ -178,3 +179,11 @@ AhtFPe1FSDA     워너원 플리 (28분)
 HaTcSa6bReQ     도깨비 OST 전곡 (57분)
 zWe4j7Yu6cE     살아보지 못한 시간들 | 감성힙합 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽(31분)
 k652OzxPjQ0     존박 커버 모음
+CIYHrLBz1UA     빌보드 핫100 1위 노래 무대 모음 비긴어게인 (27분)
+aQnklwWmnAw     시차에서부터 시차까지 (31분)
+dvOQpvxHz2I     SAY YES (37분)
+oT9aBehUCTI     크러쉬 잊어버리지마 외 9곡 (31분)
+u7WPxojqnHg     크러쉬(Crush)의 킬링벌스를 라이브로! (18분)
+NsI3qGjg1vk     포스트말론 노래모음 (22분)
+C9LNocG4Z0w     애쉬아일랜드, 빅나티, dori, 파테코··· (29분)
+YZX10jucVLs     주인장이 들으려고 만든 감성힙합 플레이리스트 (1시간 26분)
