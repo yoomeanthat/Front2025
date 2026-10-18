@@ -109,7 +109,8 @@ vhHAsUWPUp8     Bruno Mars playlist (1시간 23분)
 zE0kyw5vXzA     학창시절 mp3에 담아둔 15곡 (54분)
 dFPKgG7SbIk     인생 드라마·영화 OST 모아 봅니다 (1시간 7분)
 KRZIahb1VEQ     크러쉬 찐팬이 추천하는 Playlist
-
+vxOMAAGuwqI     프로미스나인 PLAYLIST (57분)
+f6ZMa2X3ASg     멈춘 시간 속 잠든 너를 찾아가 (39분)
 
 ==================================================== 아래는 50분 이하
 
@@ -187,3 +188,4 @@ u7WPxojqnHg     크러쉬(Crush)의 킬링벌스를 라이브로! (18분)
 NsI3qGjg1vk     포스트말론 노래모음 (22분)
 C9LNocG4Z0w     애쉬아일랜드, 빅나티, dori, 파테코··· (29분)
 YZX10jucVLs     주인장이 들으려고 만든 감성힙합 플레이리스트 (1시간 26분)
+
